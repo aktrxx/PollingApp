@@ -18,49 +18,54 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            SizedBox(height: 5,),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: QuestionBlock(),
-            ),
-          ],
-        ),
-      ),
+      body: Center(child: Text("HI"),)
     );
   }
 }
+
+
+
+
+// SingleChildScrollView(
+//         child: Column(
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             SizedBox(height: 5,),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: QuestionBlock(),
+//             ),
+//           ],
+//         ),
+//       ),

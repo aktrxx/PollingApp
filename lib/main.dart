@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:poll/Pages/Home.dart';
+import 'package:poll/Pages/qr.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,6 +31,6 @@ class RadioButtonWidget extends State {
   String radioItem = '';
 
   Widget build(BuildContext context) {
-    return HomePage();
+    return QRScan();
   }
 }
