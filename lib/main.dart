@@ -1,36 +1,25 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_string_interpolations, use_key_in_widget_constructors
+// ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
-import 'package:poll/Pages/Home.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:poll/Pages/qr.dart';
+//import 'package:quiz_app/pages/welcome/welcome_screen.dart';
 
-void main() => runApp(MyApp());
+import 'Pages/welcome/welcome_screen.dart';
+
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          // appBar: AppBar(
-          // title: Text("Flutter Radio Button Example"),
-          // ),
-          body: SafeArea(
-              child: Center(
-        child: Radiobutton(),
-      ))),
+    return GetMaterialApp(
+      title: 'Quiz App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
+      home: PageView(children: [WelcomeScreen(),QRScan()],),
     );
-  }
-}
-
-class Radiobutton extends StatefulWidget {
-  @override
-  RadioButtonWidget createState() => RadioButtonWidget();
-}
-
-class RadioButtonWidget extends State {
-  String radioItem = '';
-
-  Widget build(BuildContext context) {
-    return QRScan();
   }
 }

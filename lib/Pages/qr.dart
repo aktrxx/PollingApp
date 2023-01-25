@@ -26,25 +26,27 @@ class _QRScanState extends State<QRScan> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          SizedBox(
-            height: 400,
-            width: 400,
-            child: Container(
-                 padding: const EdgeInsets.all(16.0),
-  decoration: BoxDecoration(
-    border: Border.all(),
-  ), child: QRView(key: _gLobalkey, onQRViewCreated: qr)),
-          ),
-          Center(
-            child: (result != null)
-                ? Text('${result!.code}')
-                : Text('Scan a code'),
-          )
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(
+              height: 400,
+              width: 400,
+              child: Container(
+                   padding: const EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+      border: Border.all(),
+      ), child: QRView(key: _gLobalkey, onQRViewCreated: qr)),
+            ),
+            Center(
+              child: (result != null)
+                  ? Text('${result!.code}')
+                  : Text('Scan a code'),
+            )
+          ],
+        ),
       ),
     );
   }
