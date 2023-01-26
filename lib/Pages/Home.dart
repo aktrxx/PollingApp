@@ -28,14 +28,26 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ElevatedButton(
-              onPressed: (() => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => QRScan()))),
-              child: Text('QR')),
-          ElevatedButton(
-              onPressed: (() => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => QuizScreen()))),
-              child: Text('Quiz')),
+          SizedBox(
+            height: 150,
+            width: 300,
+            child: ElevatedButton(
+                onPressed: (() => Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => QRScan()))),
+                child: Text('QR')),
+          ),
+          SizedBox(
+            height: 100
+          ),
+          SizedBox(
+            height: 150,
+            width: 300,
+  
+            child: ElevatedButton(
+                onPressed: (() => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => QuizScreen()))),
+                child: Text('Quiz')),
+          ),
         ],
       ),
     ),
