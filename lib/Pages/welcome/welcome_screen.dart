@@ -5,17 +5,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:poll/Pages/constants.dart';
+import 'package:poll/Pages/navbar.dart';
 import 'package:poll/Pages/quiz/quiz_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:quiz_app/constants.dart';
 // import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
+   final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill,),
+      body: Container(
+      decoration  : const BoxDecoration(
+          image: DecorationImage(
+          image: AssetImage("assets/ui.jpg"), fit: BoxFit.cover),
+         ),
+        child: 
+          
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -77,7 +84,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => QuizScreen(),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
@@ -100,8 +107,9 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
           ),
-        ],
+        
       ),
+      drawer: navbar(),
     );
   }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "590805755126",
+    "project_id": "pollingapp-caec5",
+    "storage_bucket": "pollingapp-caec5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590805755126:android:e5e79ae2c567cb931e78d7",
+        "android_client_info": {
+          "package_name": "com.example.poll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590805755126-ut44vh77vfv39h44avqa4296pro81bn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKtnrz3rNxF0jnlPLPF4nGvcPR0rMZCQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590805755126-ut44vh77vfv39h44avqa4296pro81bn3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
