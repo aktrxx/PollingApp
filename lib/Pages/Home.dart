@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:poll/Pages/qr.dart';
+import 'package:poll/Pages/quiz/quiz_screen.dart';
+import 'package:poll/Pages/quizpage.dart';
 //import 'package:poll/Widgets/Question.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,10 +18,22 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      body: Center(child: Text("HI"),)
-    );
+        body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+              onPressed: (() => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => QRScan()))),
+              child: Text('QR')),
+          ElevatedButton(
+              onPressed: (() => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => QuizScreen()))),
+              child: Text('Quiz')),
+        ],
+      ),
+    ));
   }
 }
 

@@ -15,9 +15,7 @@ import 'package:poll/pages/google_sign_in.dart';
 Future main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
   runApp(MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
@@ -25,7 +23,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
     create: (context) => GoogleSignInProvider(),
-    child: MaterialApp(
+    child: GetMaterialApp(
+      title: 'Polling App',
+      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: MainPage(),
     )

@@ -1,10 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:poll/Pages/Home.dart';
 // import 'package:poll/Pages/home_p.dart';
 import 'package:poll/Pages/welcome/welcome_screen.dart';
 import 'package:poll/pages/auth/auth_p.dart';
 import 'package:poll/pages/login_p.dart';
-
+import 'package:poll/Pages/quiz/quiz_screen.dart';
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
 
@@ -18,7 +19,7 @@ class MainPage extends StatelessWidget {
             return Center(child: CircularProgressIndicator(),);
           }
           if(snapshot.hasData){
-            return WelcomeScreen();
+            return HomePage();
           }
           if(snapshot == null){
              return AuthPage();
