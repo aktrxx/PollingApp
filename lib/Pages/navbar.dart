@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:poll/Pages/google_sign_in.dart';
+import 'package:poll/pages/google_sign_in.dart';
 // import 'package:poll/Pages/home_p.dart';
 import 'package:provider/provider.dart';
+
 
 class navbar extends StatelessWidget {
   navbar({super.key});

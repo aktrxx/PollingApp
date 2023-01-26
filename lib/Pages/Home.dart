@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:poll/Pages/navbar.dart';
 import 'package:poll/Pages/qr.dart';
 import 'package:poll/Pages/quiz/quiz_screen.dart';
 import 'package:poll/Pages/quizpage.dart';
@@ -19,6 +20,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: (() => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => QRScan())) ),),
+      appBar: AppBar(),
         body: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -33,12 +37,11 @@ class _HomePageState extends State<HomePage> {
               child: Text('Quiz')),
         ],
       ),
-    ));
+    ),
+     drawer: navbar(),
+    );
   }
 }
-
-
-
 
 // SingleChildScrollView(
 //         child: Column(
