@@ -34,8 +34,7 @@ class _QRScanState extends State<QRScan> {
         context, MaterialPageRoute(builder: (context) => QuizScreen()));
     return Text('${result!.code}');
   }
-    return Scaffold(
-      body: Center(
+    return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -59,7 +58,7 @@ class _QRScanState extends State<QRScan> {
             )
           ],
         ),
-      ),
+      
     );
   }
 }
