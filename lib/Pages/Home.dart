@@ -16,8 +16,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String radioItem = '';
 
+  String radioItem = '';
+  final _codeController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +54,33 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 70
           ),
+
+         
+                      Padding(
+                        padding: EdgeInsets.only(left: 60.0,right: 60.0),
+                       child: TextField(
+                        controller: _codeController,
+                        obscureText: false,
+                        decoration: const InputDecoration(
+                           enabledBorder: OutlineInputBorder(
+                           borderSide: BorderSide(
+                          width: 1, color: Colors.greenAccent),),
+                          hintText: 'Enter Code',
+                          
+                          //fillColor: Colors.black
+
+                        ),
+                      ),
+                      ),
+
+            SizedBox(
+              height: 50
+            ),
+          
+                  
+                
           SizedBox(
-            height: 150,
+            height: 60,
             width: 260,
   
             child: ElevatedButton(
@@ -63,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 onPressed: (() => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => QuizScreen()))),
-                child: Text('POLL')),
+                child: Text('ENTER POLL')),
           ),
         ],
       ),

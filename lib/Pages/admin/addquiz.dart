@@ -81,7 +81,7 @@ class _AddQuizState extends State<AddQuiz> {
     };
 
     await docUser.set(json);
-    Navigator.pop(context);
+
   }
 
   String dropdownvalue = 'Item 1';
