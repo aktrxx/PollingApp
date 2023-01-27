@@ -1,14 +1,30 @@
-// ignore_for_file: file_names, constant_identifier_names
+// ignore_for_file: file_names, constant_identifier_names, non_constant_identifier_names
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+//List sample_data = [];
 class Question {
   final int id, answer;
   final String question;
   final List<String> options;
 
   Question({required this.id, required this.question, required this.answer, required this.options});
+
+
 }
 
-const List sample_data = [
+
+  // Future<List<dynamic>> fetchFromFirebase() async {
+  //   final docRef = FirebaseFirestore.instance.collection('quiz').doc('Array dyn');
+  //   final doc = await docRef.get();
+  //   final data = doc.data()!['q'];
+  //   sample_data = data;
+  //   return data;
+  // }
+
+
+
+ List sample_data = //await fetchFromFirebase();
+[
   {
     "id": 1,
     "question":

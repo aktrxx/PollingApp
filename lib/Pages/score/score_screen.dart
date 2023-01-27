@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:poll/Pages/Home.dart';
 import 'package:poll/Pages/constants.dart';
 import 'package:poll/Pages/controllers/question_controller.dart';
-import 'package:poll/Pages/welcome/welcome_screen.dart';
+// import 'package:poll/Pages/welcome/welcome_screen.dart';
 // import 'package:quiz_app/constants.dart';
 // import 'package:quiz_app/controllers/question_controller.dart';
 import 'package:flutter_svg/svg.dart';
@@ -41,7 +42,7 @@ class ScoreScreen extends StatelessWidget {
               Spacer(flex: 3),
               Spacer(), // 1/6
               InkWell(
-                onTap: () => Get.to(WelcomeScreen()),
+                onTap: () => Get.to(HomePage()),
                 child: Container(
                   width: double.infinity,
                   alignment: Alignment.center,
