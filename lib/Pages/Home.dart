@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:poll/Pages/AddPoll.dart';
 import 'package:poll/Pages/navbar.dart';
 import 'package:poll/Pages/qr.dart';
 import 'package:poll/Pages/quiz/quiz_screen.dart';
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: (() => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => QRScan())) ),
+                  context, MaterialPageRoute(builder: (context) => AddPoll())) ),
                   label: Text('Create Your Own quiz'),),
       appBar: AppBar(title: Text('HOME'),),
         body: Container(
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             width: 260,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.black.withOpacity(0.5),
+                  backgroundColor: Colors.black.withOpacity(0.5),
                 ),
                 onPressed: (() => Navigator.push(
                     context, MaterialPageRoute(builder: (context) => QRScan()))),
