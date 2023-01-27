@@ -21,34 +21,52 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: (() => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => AddPoll())) ),),
-      appBar: AppBar(),
-        body: Center(
+      floatingActionButton: FloatingActionButton.extended(onPressed: (() => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => AddPoll())) ),
+                  label: Text('Create Your Own quiz'),),
+      appBar: AppBar(title: Text('HOME'),),
+        body: Container(
+          constraints: const BoxConstraints.expand(),
+
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+          image: AssetImage("assets/wcbg.jpg"), fit: BoxFit.cover),
+         ),
+      child : Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             height: 150,
-            width: 300,
+            width: 260,
             child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black.withOpacity(0.5),
+                ),
                 onPressed: (() => Navigator.push(
                     context, MaterialPageRoute(builder: (context) => QRScan()))),
-                child: Text('QR')),
+                child: Text('QR')
+
+                
+          ),
           ),
           SizedBox(
-            height: 100
+            height: 70
           ),
           SizedBox(
             height: 150,
-            width: 300,
+            width: 260,
   
             child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.black.withOpacity(0.5),
+                ),
                 onPressed: (() => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => QuizScreen()))),
-                child: Text('Quiz')),
+                child: Text('POLL')),
           ),
         ],
+      ),
       ),
     ),
      drawer: navbar(),

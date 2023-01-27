@@ -15,11 +15,14 @@ class AddQuiz extends StatefulWidget {
 
 class _AddQuizState extends State<AddQuiz> {
   DateTime date = DateTime(2022, 12, 24);
-  final postControllerTitle = TextEditingController();
-  final postImageLinkController = TextEditingController();
-  final postControllerDescription = TextEditingController();
+  final quesCon = TextEditingController();
+  final o1Con = TextEditingController();
+  final o2Con = TextEditingController();
+  final o3Con = TextEditingController();
+  final o4Con = TextEditingController();
+  
   Future addToFirebase() async {
-    final docUser = FirebaseFirestore.instance.collection('quiz').doc('ACDEF');
+    final docUser = FirebaseFirestore.instance.collection('quiz').doc('ACDjbjEF');
 
     final json = {
       // 'name': nameController.text,
@@ -70,7 +73,7 @@ class _AddQuizState extends State<AddQuiz> {
                 padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
                 child: TextField(
                     keyboardType: TextInputType.multiline,
-                    controller: postControllerTitle,
+                    controller: quesCon,
                     decoration: InputDecoration(labelText: 'Question'),
                     textAlign: TextAlign.start,
                     cursorHeight: 30,
@@ -80,7 +83,7 @@ class _AddQuizState extends State<AddQuiz> {
               Padding(
                 padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
                 child: TextField(
-                    controller: postControllerDescription,
+                    controller: o1Con,
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
                     decoration: InputDecoration(labelText: 'Option 1'),
@@ -92,7 +95,7 @@ class _AddQuizState extends State<AddQuiz> {
               Padding(
                 padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
                 child: TextField(
-                    controller: postControllerDescription,
+                    controller: o2Con,
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
                     decoration: InputDecoration(labelText: 'Option 2'),
@@ -104,7 +107,7 @@ class _AddQuizState extends State<AddQuiz> {
               Padding(
                 padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
                 child: TextField(
-                    controller: postControllerDescription,
+                    controller: o3Con,
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
                     decoration: InputDecoration(labelText: 'Option 3'),
@@ -116,7 +119,7 @@ class _AddQuizState extends State<AddQuiz> {
               Padding(
                 padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
                 child: TextField(
-                    controller: postControllerDescription,
+                    controller: o4Con,
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
                     decoration: InputDecoration(labelText: 'Option 4'),
