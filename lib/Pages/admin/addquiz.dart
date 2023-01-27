@@ -44,6 +44,9 @@ class _AddQuizState extends State<AddQuiz> {
     };
 
     await docUser.set(json);
+    docUser.collection('quiz').add(json).then((documentSnapshot) =>
+    print("Added Data with ID: ${documentSnapshot.id}"));
+
   }
 
   @override
