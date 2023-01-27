@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
 
         decoration: const BoxDecoration(
           image: DecorationImage(
-          image: AssetImage("assets/wcbg.jpg"), fit: BoxFit.cover),
+          image: AssetImage("assets/treee.jpg"), fit: BoxFit.cover),
          ),
       child : Center(
       child: Column(
