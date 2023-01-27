@@ -49,35 +49,9 @@ class _AddQuizState extends State<AddQuiz> {
         FirebaseFirestore.instance.collection('quiz').doc('Array dyn');
 
     final json = {
-      // 'name': nameController.text,
-      // 'regno': regnoController.text,
-      // 'department': dropdownValue,
-      // 'test array': ['visual', 'arts']
+      
       'q': questions
-      // [
-      //   {
-      //     'Question 1': "What is your name",
-      //     'options': [
-      //       'Options 1',
-      //       'Options 2',
-      //       'Options 3',
-      //       'Options 4',
-      //     ],
-      //     'id': 1,
-      //     'ans': 3
-      //   },
-      //   {
-      //     'Question 1': "What is your name",
-      //     'options': [
-      //       'Options 1',
-      //       'Options 2',
-      //       'Options 3',
-      //       'Options 4',
-      //     ],
-      //     'id': 1,
-      //     'ans': 3
-      //   }
-      // ]
+      
     };
 
     await docUser.set(json);

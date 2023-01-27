@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:poll/Pages/qr.dart';
+// import 'package:poll/Pages/qr.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:poll/pages/auth/main_p.dart';
-import 'package:poll/pages/welcome/welcome_screen.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:poll/pages/welcome/welcome_screen.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:poll/pages/google_sign_in.dart';
 

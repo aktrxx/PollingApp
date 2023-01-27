@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:poll/Pages/quiz/quiz_screen.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QRScan extends StatefulWidget {
@@ -24,8 +25,15 @@ class _QRScanState extends State<QRScan> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
+    
+  Widget showw() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => QuizScreen()));
+    return Text('${result!.code}');
+  }
     return Scaffold(
       body: Center(
         child: Column(
@@ -35,14 +43,18 @@ class _QRScanState extends State<QRScan> {
               height: 400,
               width: 400,
               child: Container(
-                   padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-      border: Border.all(),
-      ), child: QRView(key: _gLobalkey, onQRViewCreated: qr)),
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(),
+                  ),
+                  child: QRView(key: _gLobalkey, onQRViewCreated: qr)),
             ),
             Center(
               child: (result != null)
-                  ? Text('${result!.code}')
+                  ? ElevatedButton(onPressed: (){
+                    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => QuizScreen()));
+                  }, child: Text("Enter Quiz")) //Text('${result!.code}')//showw()
                   : Text('Scan a code'),
             )
           ],
